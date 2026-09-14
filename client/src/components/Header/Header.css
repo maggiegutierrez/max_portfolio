@@ -1,0 +1,209 @@
+.header {
+  --header-bg: #171717;
+  --header-text: #fff;
+  --header-accent: #f4511e;
+
+  position: relative;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px clamp(20px, 6vw, 64px);
+  /* background: var(--header-bg); */
+}
+
+.logo {
+  flex-shrink: 0;
+  display: inline-flex;
+}
+
+.logo img {
+  display: block;
+  height: 25px;
+  width: auto;
+}
+
+/* Shared list/link resets used by both the desktop row and the mobile panel */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--header-text);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: var(--header-accent);
+}
+
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.15s ease,
+    visibility 0.15s ease,
+    max-height 0.25s ease,
+    margin-top 0.25s ease,
+    transform 0.15s ease;
+}
+
+.has-submenu:hover .submenu,
+.has-submenu:focus-within .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ---- Desktop nav: horizontal row, submenu pinned to the nav's right edge ---- */
+
+.nav-desktop {
+  position: relative;
+}
+
+.nav-desktop .nav-links {
+  gap: 40px;
+}
+
+.nav-desktop .submenu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  padding: 10px 22px;
+  text-align: right;
+  background-color: rgba(24, 24, 25, 0.548);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(-6px);
+  pointer-events: none;
+}
+
+.nav-desktop .has-submenu:hover .submenu,
+.nav-desktop .has-submenu:focus-within .submenu {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav-desktop .submenu .nav-link {
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+/* ---- Burger button: hidden on desktop ---- */
+
+.burger-btn {
+  position: relative;
+  z-index: 300;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 8px;
+  opacity: 0.75;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.burger-btn:hover,
+.burger-btn:focus-visible {
+  opacity: 1;
+}
+
+.burger-btn img {
+  display: block;
+  width: 30px;
+  height: auto;
+}
+
+/* ---- Mobile panel: fixed dark bar sliding in from the right ---- */
+
+.mobile-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  width: min(170px, 80vw);
+  overflow-y: auto;
+  padding: 120px 32px 32px;
+  background-color: rgba(24, 24, 25, 0.548);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: -12px 0 32px rgba(0, 0, 0, 0.581);
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+}
+
+.mobile-panel.is-open {
+  transform: translateX(0);
+}
+
+.mobile-panel .nav-links {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.mobile-panel .nav-link {
+  font-size: 10px;
+}
+
+.mobile-panel .submenu {
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobile-panel .has-submenu:hover .submenu,
+.mobile-panel .has-submenu:focus-within .submenu {
+  max-height: 200px;
+  margin-top: -10px;
+}
+
+.mobile-panel .submenu .nav-link {
+  font-size: 8px;
+  gap: 0;
+}
+
+@media (max-width: 1024px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .burger-btn {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mobile-panel {
+    display: none;
+  }
+}

@@ -1,0 +1,14 @@
+/* WebDevelopment: el h2 del título ya no está envuelto en <a>
+   (no hay página de detalle de proyecto), así que reaplico manualmente
+   el estilo que style.css solo define para ".blog-post-caption h2 a" */
+.blog-post-caption h2 {
+  display: block;
+  padding: 10px 0px;
+  color: var(--heading-color);
+  font-family: var(--title-font);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+}

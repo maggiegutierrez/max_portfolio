@@ -2,14 +2,19 @@ import { Link } from "react-router-dom";
 import CounterItem from "../../components/CounterItem";
 import "./Home.css";
 
-const tecnologies = [
-  "partner1.png",
-  "partner2.png",
-  "partner3.png",
-  "partner4.png",
-  "partner5.png",
-  "partner6.png",
-  "partner7.png",
+const technologies = [
+  "css.png",
+  "html.png",
+  "javascript.png",
+  "expressjs.png",
+  "mongodb.png",
+  "ilustrator.png",
+  "photoshop.png",
+  "lightroom.png",
+  "react.png",
+  "github.png",
+  "npm.png",
+  "VSC.png",
 ];
 
 const services = [
@@ -31,10 +36,11 @@ function Home() {
                   Full Stack <br /> Developer
                 </h2>
                 <p>
-                  Hi, I'm Maggie, a front-end-turned-fullstack developer
-                  building clean, usable digital experiences.
+                  Hi, I'm Maggie, a fullstack web developer, graphic designer,
+                  and photographer dedicated to building clean and usable
+                  digital experiences.
                 </p>
-                <Link className="theme-btn" to="/contact">
+                <Link className="theme-btn" to="/about">
                   Get In touch
                 </Link>
               </div>
@@ -47,7 +53,7 @@ function Home() {
                   data-animated="true"
                 >
                   <div className="scroller__inner">
-                    {[...tecnologies, ...tecnologies].map((logo, index) => (
+                    {[...technologies, ...technologies].map((logo, index) => (
                       <img
                         key={`${logo}-${index}`}
                         src={`/assets/images/client-logos/${logo}`}
@@ -101,9 +107,10 @@ function Home() {
             <div className="col-lg-8 col-sm-12">
               <div className="about-content-part">
                 <p>
-                  I'm Maggie Gutiérrez, a passionate front-end developer with a
-                  strong background in graphic design. My curiosity drives me to
-                  explore new technologies and create innovative solutions.
+                  I'm Maggie Gutiérrez, a passionate FullStack web developer
+                  with a strong background in graphic design and communication
+                  sciences. My curiosity drives me to explore new technologies
+                  and create innovative solutions.
                 </p>
               </div>
               <div className="hero-counter-area d-flex justify-content-between">

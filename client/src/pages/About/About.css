@@ -1,1 +1,239 @@
-/* Estilos específicos de About. La mayoría del look viene de assets/css/style.css (Fase 1). */
+/* About: estilos exclusivos de About. Movidos desde assets/css/style.css y
+   assets/css/responsive.css.
+
+   .about-area, .about-content-part p, .about-image y el bloque de
+   .hero-counter-area/.count-text también viven en Home.css a propósito: el
+   teaser "About Me" de Home y esta página completa comparten exactamente el
+   mismo bloque de bio + contadores, con clases idénticas. */
+
+.about-area {
+  padding-top: 0px;
+  padding-bottom: 30px;
+  background: var(--black-color);
+}
+
+.about-content-part p {
+  font-size: 25px;
+  line-height: 1.4em;
+  margin-top: 50px;
+}
+
+.about-image {
+  padding-right: 50px;
+}
+
+.hero-counter-area {
+  margin-top: 60px;
+}
+
+.counter-item {
+  text-align: center;
+}
+
+.counter-title {
+  color: var(--text-color);
+}
+
+.hero-counter-area .count-text {
+  line-height: 1;
+  font-weight: 700;
+  color: var(--text-color);
+  text-align: center;
+  font-size: 50px;
+}
+
+.hero-counter-area .count-text.plus:after {
+  content: "+";
+}
+
+.hero-counter-area .count-text.k-plus:after {
+  content: "k+";
+}
+
+.hero-counter-area .count-text.percent:after {
+  content: "%+";
+}
+
+.hero-counter-area .counter-title {
+  display: block;
+}
+
+.about-social {
+  margin-top: 30px;
+}
+
+.about-social ul {
+  list-style: none;
+}
+
+.about-social ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.about-social ul li a {
+  font-size: 20px;
+  border: 3px solid var(--border-color);
+  padding: 10px 14px;
+  border-radius: 30px;
+}
+
+.about-social ul li a:hover {
+  color: var(--primary-color);
+}
+
+.resume-area {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: var(--body-background);
+}
+
+.resume-wrapper {
+  position: relative;
+}
+
+.resume-wrapper .resume-box {
+  margin-bottom: 20px;
+  background: var(--black-color);
+  padding: 60px 20px 0;
+  border-radius: 20px;
+}
+
+.resume-box h2 {
+  color: var(--main-color);
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.resume-wrapper .resume-box:last-child {
+  margin-bottom: 0;
+}
+
+.resume-wrapper .resume-box .resume-date {
+  background: var(--primary-color);
+  position: relative;
+  display: inline-block;
+  border: 2px solid var(--border-color);
+  border-radius: 2em;
+  margin-bottom: 1em;
+  padding: 5px 12px;
+  color: #000;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  transition: linear 0.1s;
+}
+
+.resume-wrapper .resume-box .resume-date:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 1px;
+  border-top: 2px solid var(--primary-color);
+}
+
+.resume-wrapper .resume-box .resume-date:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -23px;
+  transform: translateY(-50%);
+  background: var(--primary-color);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.resume-box p {
+  margin-bottom: 0;
+  margin-top: 20px;
+  color: rgb(119, 119, 125);
+}
+
+.resume-box span {
+  color: rgb(119, 119, 125);
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+  .about-social {
+    margin-bottom: 30px;
+  }
+
+  .about-area {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+
+  .resume-area {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .about-image {
+    padding-bottom: 30px;
+    padding-right: 0;
+  }
+}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+  .about-area {
+    padding-bottom: 60px;
+  }
+
+  .about-image {
+    padding-bottom: 30px;
+  }
+
+  .about-content-part {
+    padding-left: 0px;
+    padding-right: 0;
+  }
+
+  .about-content-part p {
+    font-size: 24px;
+    line-height: 1.4em;
+  }
+
+  .resume-area {
+    padding-top: 50px;
+  }
+
+  .hero-counter-area {
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .hero-counter-area .count-text {
+    font-size: 30px;
+  }
+
+  .hero-counter-area .counter-title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .resume-wrapper .resume-box {
+    margin-bottom: 24px;
+  }
+
+  .resume-wrapper .resume-box:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hero-counter-area {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}

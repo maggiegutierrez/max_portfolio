@@ -1,16 +1,17 @@
+import "./GalleryGrid.css";
+
 function GalleryGrid({ items }) {
   return (
     <div className="projects-area" id="projects">
       <div className="container-fluid">
-        <div className="row g-4 portfolio-grid">
+        <div className="row g-3 portfolio-grid">
           {items.map((item) => (
-            <div className="col-md-6 col-xl-6 portfolio-item" key={item._id}>
+            <div
+              className="col-6 col-md-4 col-lg-3 portfolio-item"
+              key={item._id}
+            >
               <div className="portfolio-box">
                 <img src={item.imageUrl} alt={item.title} />
-                <span className="portfolio-category">{item.category}</span>
-                <div className="portfolio-caption">
-                  <h1>{item.title}</h1>
-                </div>
               </div>
             </div>
           ))}

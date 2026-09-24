@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./PageHero.css";
 
 function PageHero({ title, parentLabel, currentLabel }) {
   return (

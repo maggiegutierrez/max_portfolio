@@ -1,0 +1,101 @@
+/* Footer: estilos exclusivos del footer. Movidos desde assets/css/style.css
+   y assets/css/responsive.css — ninguna otra sección del sitio usa estas clases. */
+
+.footer-top {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.footer-top h2 {
+  color: var(--text-color);
+  font-size: 30px;
+  line-height: 0.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.footer-top h2 a:hover {
+  color: var(--primary-color);
+}
+
+.footer-top p {
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: 200;
+  text-align: center;
+}
+
+p.copy-left-text {
+  color: #ffffff5d;
+  font-size: 10px;
+  line-height: 0px;
+  text-align-last: left;
+  margin: 20px;
+}
+
+p.copy-left-text a:hover {
+  color: var(--primary-color);
+}
+
+p.copy-right-text {
+  color: #ffffff5d;
+  font-size: 10px;
+  line-height: 0px;
+  text-align-last: right;
+  margin: 20px;
+}
+
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1280px) {
+  .footer-top h2 {
+    font-size: 30px;
+    line-height: 0.5em;
+  }
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+  .main-footer {
+    padding: 10px 0px;
+  }
+
+  .footer-top h2 {
+    font-size: 30px;
+    line-height: 0.5em;
+  }
+
+  .footer-top {
+    padding-top: 10px;
+  }
+}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+  .main-footer {
+    padding: 10px 0px;
+  }
+
+  p.copy-left-text {
+    text-align-last: center;
+    margin: 10px;
+  }
+
+  p.copy-right-text {
+    text-align-last: center;
+    margin: 10px;
+  }
+
+  .footer-top h2 {
+    font-size: 25px;
+    line-height: 0.2em;
+  }
+
+  .footer-top {
+    padding-top: 5px;
+  }
+
+  .footer-top p {
+    font-size: 15px;
+  }
+}

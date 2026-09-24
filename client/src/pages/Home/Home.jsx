@@ -33,7 +33,7 @@ function Home() {
               <div className="hero-content text-center">
                 <img src="/assets/images/about/me.jpg" alt="Maggie Gutierrez" />
                 <h2>
-                  Full Stack <br /> Developer
+                  Full Stack <br /> Web Developer
                 </h2>
                 <p>
                   Hi, I'm Maggie, a fullstack web developer, graphic designer,
@@ -56,7 +56,7 @@ function Home() {
                     {[...technologies, ...technologies].map((logo, index) => (
                       <img
                         key={`${logo}-${index}`}
-                        src={`/assets/images/client-logos/${logo}`}
+                        src={`/assets/images/technologies/${logo}`}
                         alt="Company"
                       />
                     ))}

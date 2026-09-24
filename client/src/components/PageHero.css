@@ -1,0 +1,42 @@
+/* PageHero: estilos exclusivos del hero de páginas internas
+   (About, 404, y las 3 rutas de Services). Movidos desde assets/css/style.css
+   y assets/css/responsive.css. */
+
+.single-page-hero-area {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.single-page-hero-area h2 {
+  margin-bottom: 15px;
+  font-size: 90px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  text-align: center;
+  color: var(--main-color);
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+  .single-page-hero-area {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+  .single-page-hero-area h2 {
+    font-size: 80px;
+    line-height: 81px;
+  }
+}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+  .single-page-hero-area {
+    padding-top: 40px;
+    padding-bottom: 0px;
+  }
+
+  .single-page-hero-area h2 {
+    font-size: 60px;
+  }
+}

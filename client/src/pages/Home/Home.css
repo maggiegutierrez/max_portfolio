@@ -1,1 +1,335 @@
-/* Estilos específicos de Home. La mayoría del look viene de assets/css/style.css (Fase 1). */
+/* Home: estilos exclusivos de Home. Movidos desde assets/css/style.css y
+   assets/css/responsive.css.
+
+   .about-area, .about-content-part p, .about-image y el bloque de
+   .hero-counter-area/.count-text se repiten en About.css a propósito: el
+   teaser "About Me" de Home y la página /about completa comparten
+   exactamente el mismo bloque de bio + contadores, con clases idénticas. */
+
+.main-hero-area {
+  padding-top: 200px;
+  padding-bottom: 100px;
+  background-position: top center;
+  background-size: 100% auto;
+}
+
+.hero-content {
+  position: relative;
+}
+
+.hero-content h2 {
+  font-weight: 500;
+  font-size: 100px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.hero-content p {
+  color: var(--text-color);
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-content img {
+  width: 200px;
+  position: absolute;
+  right: 10%;
+  top: -30%;
+  z-index: -9;
+  border-radius: 50%;
+}
+
+.company-list {
+  margin-top: 50px;
+}
+
+.scroller__inner img {
+  margin: 0px 40px;
+  width: 90px;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+.services-area {
+  padding-bottom: 100px;
+  background-position: right center;
+}
+
+.service-item {
+  display: block;
+  position: relative;
+  padding: 30px 40px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: var(--black-color);
+  margin-bottom: 30px;
+  transition: 0.5s;
+}
+
+.service-item:hover.service-item h5 {
+  color: var(--black-color);
+  transition: 0.5s;
+}
+
+.service-item h5 {
+  background: var(--primary-color);
+  margin-bottom: 60px;
+  color: var(--black-color);
+  font-family: var(--text-font);
+  border: 1px solid;
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.service-item h4 {
+  color: var(--heading-color);
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.service-item i {
+  position: absolute;
+  color: var(--main-color);
+  transition: 0.5s;
+  top: 15%;
+  right: 5%;
+  font-size: 30px;
+}
+
+.service-item:hover.service-item i {
+  rotate: 45deg;
+  color: var(--primary-color);
+}
+
+.about-area {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: var(--black-color);
+}
+
+.about-content-part p {
+  font-size: 30px;
+  line-height: 1.4em;
+}
+
+.about-image {
+  padding-right: 50px;
+}
+
+.hero-counter-area {
+  margin-top: 60px;
+}
+
+.counter-item {
+  text-align: center;
+}
+
+.counter-title {
+  color: var(--text-color);
+}
+
+.hero-counter-area .count-text {
+  line-height: 1;
+  font-weight: 700;
+  color: var(--text-color);
+  text-align: center;
+  font-size: 50px;
+}
+
+.hero-counter-area .count-text.plus:after {
+  content: "+";
+}
+
+.hero-counter-area .count-text.k-plus:after {
+  content: "k+";
+}
+
+.hero-counter-area .count-text.percent:after {
+  content: "%+";
+}
+
+.hero-counter-area .counter-title {
+  display: block;
+}
+
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1280px) {
+  .hero-content {
+    padding: 0;
+  }
+
+  .hero-content h2 {
+    font-size: 100px;
+  }
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+  .main-hero-area {
+    padding-top: 150px;
+  }
+
+  .about-area {
+    padding-top: 50px;
+  }
+
+  .services-area {
+    padding-bottom: 80px;
+  }
+
+  .service-item {
+    margin-bottom: 30px;
+  }
+
+  .service-item h4 {
+    font-size: 24px;
+  }
+
+  .hero-content {
+    padding: 0px 10px;
+    text-align: center;
+  }
+
+  .hero-content h2 {
+    font-size: 80px;
+  }
+
+  .hero-content img {
+    width: 160px;
+  }
+
+  .scroller__inner img {
+    margin: 0px 20px;
+  }
+
+  .about-image {
+    padding-bottom: 30px;
+    padding-right: 0;
+  }
+}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+  .main-hero-area {
+    padding-top: 180px;
+  }
+
+  .services-area {
+    padding-bottom: 80px;
+  }
+
+  .service-item {
+    margin-bottom: 30px;
+  }
+
+  .hero-content {
+    padding: 0px 10px;
+    text-align: center;
+  }
+
+  .hero-content h2 {
+    font-size: 62px;
+  }
+
+  .hero-content img {
+    width: 160px;
+  }
+
+  .scroller__inner img {
+    margin: 0px 20px;
+  }
+
+  .about-image {
+    padding-bottom: 30px;
+  }
+
+  .about-content-part {
+    padding-left: 0px;
+    padding-right: 0;
+  }
+
+  .about-content-part p {
+    font-size: 24px;
+    line-height: 1.4em;
+  }
+
+  .hero-counter-area {
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .hero-counter-area .count-text {
+    font-size: 30px;
+  }
+
+  .hero-counter-area .counter-title {
+    font-size: 14px;
+  }
+}
+
+/* Wide Mobile vertical Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .hero-content {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hero-counter-area {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .service-item {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .service-item {
+    display: block;
+  }
+}

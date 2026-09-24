@@ -33,7 +33,11 @@ function About() {
                   suffixClass="plus"
                   label="Months Of Experience"
                 />
-                <CounterItem target={3} label="Complete Projects" />
+                <CounterItem
+                  target={4}
+                  suffixClass="plus"
+                  label="Complete Projects"
+                />
                 <CounterItem
                   target={90}
                   suffixClass="percent"

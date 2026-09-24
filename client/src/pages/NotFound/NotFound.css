@@ -1,1 +1,9 @@
-/* Estilos específicos de NotFound. La mayoría del look viene de assets/css/style.css (Fase 1). */
+/* NotFound: estilos exclusivos de la página 404. Movido desde assets/css/style.css. */
+
+.error-area h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  color: var(--heading-color);
+}

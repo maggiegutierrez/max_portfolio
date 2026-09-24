@@ -7,10 +7,11 @@ import mediaRouter from "./routes/media.routes.js";
 const app = express();
 
 const isDev = process.env.NODE_ENV !== "production";
+const clientUrl = process.env.CLIENT_URL?.replace(/\/$/, "");
 
 app.use(
   cors({
-    origin: isDev ? /^http:\/\/localhost:\d+$/ : process.env.CLIENT_URL,
+    origin: isDev ? /^http:\/\/localhost:\d+$/ : clientUrl,
   }),
 );
 

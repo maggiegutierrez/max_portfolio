@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./PageHero.css";
 
-function PageHero({ title, parentLabel, currentLabel }) {
+function PageHero({ title }) {
   return (
     <section className="single-page-hero-area">
       <div className="container">

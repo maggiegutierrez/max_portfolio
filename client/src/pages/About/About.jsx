@@ -78,7 +78,7 @@ function About() {
             <div className="col-xl-6 col-md-6">
               <div className="resume-wrapper">
                 <div className="resume-box">
-                  <span className="resume-date">2025 - Present</span>
+                  <span className="resume-date">2025 - 2026</span>
                   <h2>Web Development (FullStack)</h2>
                   <span>@ TripleTen Bootcamp</span>
                   <p>

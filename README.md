@@ -1,6 +1,6 @@
 # PORTFOLIO MAGGIE GUTIÉRREZ
 
-    A rich and interactive traveling profile.
+    A rich and interactive traveling art profile.
 
 ## Project Overview
 
@@ -8,7 +8,7 @@ This project presents an interactive and artistic website to show a rich portfol
 
 ## Live Demo
 
-🌐 **[View Live Project](https://maggiegutierrez.github.io/PORTFOLIO_MAX/)**
+🌐 **[View Live Project](https://max-portfolio-1po1.vercel.app/)**
 
 ## Features
 
@@ -18,17 +18,28 @@ This project presents an interactive and artistic website to show a rich portfol
 - **Semantic HTML**: Properly structured markup for accessibility
 - **POO**: Following the properly JavaScript structure for a better understanding
 
-## Technologies Used
+### FRONTEND
 
-- HTML5
-- CSS3
-- Responsive Web Design
-- Media Queries
-- Flexbox/Grid Layout
-- Inter Font Family
-- Java Script
-- POO & NPM
+- React — UI library
+- Vite — dev server and build tool
+- React Router DOM — routing (public/protected routes)
+- Fonts: "Remixicon", Arial, sans-serif;, Arial, sans-serif
 
+### BACKEND
+
+- Node.js — runtime
+- Express — server framework
+- Mongoose — ODM for MongoDB (schemas, models)
+- cors — cross-origin access control
+- dotenv — environment variable loading in local development
+- nodemon — auto-reload during development
+
+### DATABASE
+
+- MongoDB — NoSQL database
+- MongoDB Atlas — managed database hosting in production
+
+  
 ## Design Specifications
 
 The project follows a mobile-first approach with the following breakpoints:
@@ -48,16 +59,6 @@ Clean, maintainable code
 Future Enhancements
 Include user-generated c
 
-## Installation & Setup
-
-Clone the repository:
-bash
-git clone https://github.com/maggiegutierrez/PORTFOLIO_MAX.git
-Navigate to the project directory:
-bash
-cd web_project_around_es
-Open index.html in your preferred web browser or use a local server.
-
 ## Author
 
 Maggie Gutiérrez
@@ -67,7 +68,3 @@ Maggie Gutiérrez
 ## Acknowledgments
 
 TripleTen Web
-
-
-ontent features
-POO & NPM

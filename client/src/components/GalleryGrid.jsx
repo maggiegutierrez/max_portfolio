@@ -11,7 +11,7 @@ function GalleryGrid({ items }) {
               key={item._id}
             >
               <div className="portfolio-box">
-                <img src={item.imageUrl} alt={item.title} />
+                <img src={item.imageUrl} alt={item.title} loading="lazy" />
               </div>
             </div>
           ))}

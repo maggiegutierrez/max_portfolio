@@ -42,6 +42,10 @@
   text-transform: uppercase;
 }
 
+.blog-post-caption p {
+  white-space: pre-line;
+}
+
 /* Tablet Layout: 768px. */
 @media only screen and (min-width: 767px) and (max-width: 991px) {
   .blog-area {

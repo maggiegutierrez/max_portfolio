@@ -1,11 +1,3 @@
-/* Home: estilos exclusivos de Home. Movidos desde assets/css/style.css y
-   assets/css/responsive.css.
-
-   .about-area, .about-content-part p, .about-image y el bloque de
-   .hero-counter-area/.count-text se repiten en About.css a propósito: el
-   teaser "About Me" de Home y la página /about completa comparten
-   exactamente el mismo bloque de bio + contadores, con clases idénticas. */
-
 .main-hero-area {
   padding-top: 200px;
   padding-bottom: 100px;
@@ -152,7 +144,7 @@
 }
 
 .about-image {
-  padding-right: 50px;
+  padding: 0 15px 30px 15px;
 }
 
 .hero-counter-area {
@@ -184,7 +176,7 @@
 }
 
 .hero-counter-area .count-text.percent:after {
-  content: "%+";
+  content: "%";
 }
 
 .hero-counter-area .counter-title {
@@ -199,6 +191,13 @@
 
   .hero-content h2 {
     font-size: 100px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hero-counter-area {
+    padding-left: 28px;
+    padding-right: 28px;
   }
 }
 
@@ -240,15 +239,10 @@
   .scroller__inner img {
     margin: 0px 20px;
   }
-
-  .about-image {
-    padding-bottom: 30px;
-    padding-right: 0;
-  }
 }
 
 /* Mobile Layout: 320px. */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 766px) {
   .main-hero-area {
     padding-top: 180px;
   }
@@ -278,10 +272,6 @@
     margin: 0px 20px;
   }
 
-  .about-image {
-    padding-bottom: 30px;
-  }
-
   .about-content-part {
     padding-left: 0px;
     padding-right: 0;
@@ -307,20 +297,6 @@
   }
 }
 
-/* Wide Mobile vertical Layout: 480px. */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .hero-content {
-    padding: 0;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .hero-counter-area {
-    padding-left: 28px;
-    padding-right: 28px;
-  }
-}
-
 @media only screen and (max-width: 575px) {
   .service-item {
     padding-left: 25px;
@@ -328,8 +304,33 @@
   }
 }
 
-@media only screen and (max-width: 479px) {
+/* Wide Mobile vertical Layout: 480px. */
+@media only screen and (max-width: 480px) {
+  .hero-content {
+    padding: 0;
+  }
+
   .service-item {
     display: block;
+  }
+
+  .counter-title {
+    line-height: 1.2em;
+  }
+
+  .hero-content h2 {
+   font-size: 40px;
+  } 
+
+  .hero-content p {
+    font-size: 15px;
+  } 
+
+  .hero-content img {
+    top: -50%;
+  }
+
+  .about-image {
+    padding-bottom: 0;
   }
 }

@@ -30,7 +30,7 @@
 }
 
 /* Mobile Layout: 320px. */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 766px) {
   .single-page-hero-area {
     padding-top: 40px;
     padding-bottom: 0px;
@@ -38,5 +38,13 @@
 
   .single-page-hero-area h2 {
     font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .single-page-hero-area h2 {
+    font-size: 45px;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }

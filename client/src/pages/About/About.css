@@ -1,11 +1,3 @@
-/* About: estilos exclusivos de About. Movidos desde assets/css/style.css y
-   assets/css/responsive.css.
-
-   .about-area, .about-content-part p, .about-image y el bloque de
-   .hero-counter-area/.count-text también viven en Home.css a propósito: el
-   teaser "About Me" de Home y esta página completa comparten exactamente el
-   mismo bloque de bio + contadores, con clases idénticas. */
-
 .about-area {
   padding-top: 0px;
   padding-bottom: 30px;
@@ -19,7 +11,7 @@
 }
 
 .about-image {
-  padding-right: 50px;
+  padding: 0 15px 30px 15px;
 }
 
 .hero-counter-area {
@@ -51,7 +43,7 @@
 }
 
 .hero-counter-area .count-text.percent:after {
-  content: "%+";
+  content: "%";
 }
 
 .hero-counter-area .counter-title {
@@ -104,7 +96,7 @@
   font-size: 30px;
   text-transform: uppercase;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .resume-wrapper .resume-box:last-child {
@@ -175,21 +167,12 @@
     padding-top: 80px;
     padding-bottom: 80px;
   }
-
-  .about-image {
-    padding-bottom: 30px;
-    padding-right: 0;
-  }
 }
 
 /* Mobile Layout: 320px. */
 @media only screen and (max-width: 767px) {
   .about-area {
     padding-bottom: 60px;
-  }
-
-  .about-image {
-    padding-bottom: 30px;
   }
 
   .about-content-part {
@@ -235,5 +218,11 @@
   .hero-counter-area {
     padding-left: 28px;
     padding-right: 28px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .resume-box span {
+    font-size: 13px;
   }
 }

@@ -41,7 +41,7 @@ function About() {
                 <CounterItem
                   target={90}
                   suffixClass="percent"
-                  label="Client Satisfactions"
+                  label="User Satisfaction"
                 />
               </div>
 
